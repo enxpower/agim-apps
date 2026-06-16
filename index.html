@@ -42,25 +42,16 @@
     .app-title{font-size:20px;font-weight:300;letter-spacing:-.015em;color:var(--navy);margin:0 0 var(--sp-s)}
     .app-desc{font-size:13px;color:var(--body);line-height:1.65;margin:0}
     .app-link{display:inline-block;margin-top:var(--sp-m);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean);font-weight:600}
-    .foot{border-top:none;padding:var(--sp-l) var(--gutter);background:#162A45}
+    .foot{border-top:3px solid #4A7FB5;padding:var(--sp-l) var(--gutter);background:#0B2545}
     .foot-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-    .foot-logo svg{height:25px;width:auto}
-    .foot-copy{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:.04em}
+    .foot-logo{display:flex;align-items:center}
+    .foot-copy{font-size:11px;color:rgba(255,255,255,.32);letter-spacing:.04em}
   </style>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Site navigation">
   <div class="nav-inner">
-    <a class="nav-logo" href="https://agim.ca" aria-label="AGI&amp;M home">
-      <svg width="90" height="25" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0"  y="4"  width="22" height="22" fill="#0B2545"/>
-        <rect x="26" y="4"  width="22" height="22" fill="#4A7FB5"/>
-        <rect x="0"  y="30" width="22" height="22" fill="#4A7FB5"/>
-        <rect x="26" y="30" width="22" height="22" fill="#0B2545"/>
-        <text x="60" y="22" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#0B2545" letter-spacing="2.5">AGI&amp;M</text>
-        <text x="60" y="42" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#4A7FB5" letter-spacing="2">ASSETS INC.</text>
-      </svg>
-    </a>
+    <a class="nav-logo" href="https://agim.ca" aria-label="AGI&amp;M home"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><rect x="1" y="1" width="11" height="11" fill="#0B2545"/><rect x="14" y="1" width="11" height="11" fill="#4A7FB5"/><rect x="1" y="14" width="11" height="11" fill="#4A7FB5"/><rect x="14" y="14" width="11" height="11" fill="#0B2545"/></svg><span style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#0B2545;margin-left:11px;">AGI&amp;M</span></a>
   </div>
 </nav>
 
@@ -86,16 +77,7 @@
 
 <footer class="foot" role="contentinfo">
   <div class="foot-inner">
-    <a href="https://agim.ca" aria-label="AGI&amp;M home">
-      <svg class="foot-logo" width="90" height="25" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0"  y="4"  width="22" height="22" fill="#FFFFFF"/>
-        <rect x="26" y="4"  width="22" height="22" fill="rgba(255,255,255,0.45)"/>
-        <rect x="0"  y="30" width="22" height="22" fill="rgba(255,255,255,0.45)"/>
-        <rect x="26" y="30" width="22" height="22" fill="#FFFFFF"/>
-        <text x="60" y="22" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" letter-spacing="2.5">AGI&amp;M</text>
-        <text x="60" y="42" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.55)" letter-spacing="2">ASSETS INC.</text>
-      </svg>
-    </a>
+    <svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true"><rect x="1" y="1" width="11" height="11" fill="#fff"/><rect x="14" y="1" width="11" height="11" fill="rgba(255,255,255,.42)"/><rect x="1" y="14" width="11" height="11" fill="rgba(255,255,255,.42)"/><rect x="14" y="14" width="11" height="11" fill="#fff"/></svg><span style="font-size:13px;font-weight:700;letter-spacing:.02em;color:#fff;margin-left:11px;">AGI&amp;M Assets Inc.</span>
     <span class="foot-copy">&copy; 2024&ndash;2026 AGI&amp;M ASSETS INC. All rights reserved.</span>
   </div>
 </footer>
