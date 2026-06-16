@@ -39,7 +39,7 @@
   <nav class="nav" role="navigation" aria-label="Site navigation">
     <div class="nav-inner">
       <a class="nav-logo" href="https://agim.ca" aria-label="AGI&amp;M home">
-        <svg width="160" height="45" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="130" height="36" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="0"  y="4"  width="22" height="22" fill="#0B2545"/>
           <rect x="26" y="4"  width="22" height="22" fill="#4A7FB5"/>
           <rect x="0"  y="30" width="22" height="22" fill="#4A7FB5"/>
@@ -288,7 +288,7 @@
                 <label class="check-opt"><input type="checkbox" name="certifications" value="IEC62133"><span class="check-text">IEC 62133 &mdash; Safety for portable battery packs</span></label>
                 <label class="check-opt"><input type="checkbox" name="certifications" value="CE"><span class="check-text">CE &mdash; Required for European market</span></label>
                 <label class="check-opt"><input type="checkbox" name="certifications" value="Other"><span class="check-text">Other &mdash; Specify in Additional Notes</span></label>
-                <label class="check-opt"><input type="checkbox" name="certifications" value="Not sure"><span class="check-text">Not sure &mdash; AGI&amp;M will advise</span></label>
+                <label class="check-opt"><input type="checkbox" name="certifications" value="Not sure" id="cert-notsure"><span class="check-text">Not sure &mdash; AGI&amp;M will advise</span></label>
               </div>
               <span class="field-hint">Select all that apply. If unsure, AGI&amp;M will confirm before issuing the RFQ.</span>
             </fieldset>
@@ -400,10 +400,10 @@
     </div>
   </main>
 
-  <footer class="page-foot" role="contentinfo">
+  <footer class="page-foot page-foot--dark" role="contentinfo">
     <div class="page-foot-inner">
       <a class="foot-logo" href="https://agim.ca" aria-label="AGI&amp;M home">
-        <svg width="120" height="34" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="110" height="30" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="0"  y="4"  width="22" height="22" fill="#0B2545"/>
           <rect x="26" y="4"  width="22" height="22" fill="#4A7FB5"/>
           <rect x="0"  y="30" width="22" height="22" fill="#4A7FB5"/>
@@ -412,7 +412,7 @@
           <text x="60" y="42" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#4A7FB5" letter-spacing="2">ASSETS INC.</text>
         </svg>
       </a>
-      <span class="foot-copy">&copy; 2024&ndash;2026 AGI&amp;M ASSETS INC. All rights reserved.</span>
+      <span class="foot-copy">&copy; 2019&ndash;2026 AGI&amp;M ASSETS INC. All rights reserved.</span>
     </div>
   </footer>
 
@@ -420,5 +420,26 @@
 
 <script src="../../shared/js/utils.js"></script>
 <script src="js/form.js"></script>
+
+<script>
+(function(){
+  document.addEventListener('DOMContentLoaded', function(){
+    var boxes = document.querySelectorAll('input[name="certifications"]');
+    var notSure = document.getElementById('cert-notsure');
+    if(!notSure) return;
+    boxes.forEach(function(cb){
+      cb.addEventListener('change', function(){
+        if(cb === notSure && cb.checked){
+          // "Not sure" selected → uncheck all others
+          boxes.forEach(function(o){ if(o !== notSure) o.checked = false; });
+        } else if(cb !== notSure && cb.checked){
+          // Specific cert selected → uncheck "Not sure"
+          notSure.checked = false;
+        }
+      });
+    });
+  });
+}());
+</script>
 </body>
 </html>
