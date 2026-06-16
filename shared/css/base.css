@@ -1,0 +1,283 @@
+/* =============================================================================
+   AGI&M Base Styles
+   File: shared/css/base.css
+   Platform: AGI&M Publishing Platform
+
+   USAGE:
+   Import after tokens.css in every application:
+     <link rel="stylesheet" href="/shared/css/tokens.css">
+     <link rel="stylesheet" href="/shared/css/base.css">
+
+   This file provides:
+   - CSS reset
+   - Box-sizing normalization
+   - Horizontal scroll lock (mandatory per HTML_ENGINEERING_STANDARDS.md §2)
+   - Base typography defaults
+   - Base link styles
+   - Focus ring normalization
+   - Print baseline
+
+   Do NOT add component styles here.
+   Do NOT add layout styles here.
+   Application-specific styles belong in each application's local CSS file.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ----------------------------------------------------------------------------
+   1. BOX-SIZING RESET
+---------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------------------------
+   2. HORIZONTAL SCROLL LOCK
+   Mandatory — HTML Engineering Standards §2: No horizontal scrolling
+   under any circumstance on any device at any breakpoint.
+---------------------------------------------------------------------------- */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Catch-all — no element may exceed viewport width */
+* {
+  max-width: 100%;
+}
+
+/* ----------------------------------------------------------------------------
+   3. ROOT DEFAULTS
+---------------------------------------------------------------------------- */
+html {
+  font-size: 16px; /* Base for rem calculations */
+  -webkit-text-size-adjust: 100%; /* Prevent iOS font scaling on orientation change */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------------------------------------------------------------------------
+   4. TYPOGRAPHY RESET
+---------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+p {
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ----------------------------------------------------------------------------
+   5. LINK DEFAULTS
+---------------------------------------------------------------------------- */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Never suppress focus outlines — accessibility requirement */
+a:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ----------------------------------------------------------------------------
+   6. FOCUS NORMALIZATION
+   Keyboard focus must always be visible (HTML Engineering Standards §9)
+---------------------------------------------------------------------------- */
+
+/* Remove default outline only when custom focus-visible is provided */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ----------------------------------------------------------------------------
+   7. IMAGE DEFAULTS
+---------------------------------------------------------------------------- */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%; /* Prevents images from causing horizontal overflow */
+}
+
+img {
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* ----------------------------------------------------------------------------
+   8. FORM ELEMENT RESETS
+---------------------------------------------------------------------------- */
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Inherit body font — browsers don't do this by default */
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* Minimum touch target — HTML Engineering Standards §9 (WCAG 2.5.5) */
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+label[for],
+a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Exceptions for inline elements that cannot be 44px */
+a:not([class]) {
+  min-height: unset;
+  min-width: unset;
+}
+
+/* ----------------------------------------------------------------------------
+   9. LIST RESETS
+---------------------------------------------------------------------------- */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ----------------------------------------------------------------------------
+   10. TABLE DEFAULTS
+---------------------------------------------------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Tables can cause horizontal scroll — always wrap in overflow container */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ----------------------------------------------------------------------------
+   11. LONG STRING OVERFLOW PROTECTION
+   Prevents URLs, codes, and long strings from breaking layout
+---------------------------------------------------------------------------- */
+p, li, td, th, label, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Monospace elements (codes, IDs) */
+code, pre, kbd, samp {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+/* ----------------------------------------------------------------------------
+   12. ACCESSIBILITY UTILITIES
+---------------------------------------------------------------------------- */
+
+/* Visually hidden but accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip-to-content link — appears on focus for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  z-index: var(--z-tooltip);
+  border-radius: var(--radius-md);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* ----------------------------------------------------------------------------
+   13. PRINT BASELINE
+---------------------------------------------------------------------------- */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

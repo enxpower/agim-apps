@@ -1,0 +1,178 @@
+/* =============================================================================
+   AGI&M Design Tokens
+   File: shared/css/tokens.css
+   Platform: AGI&M Publishing Platform (agim-battery-sourcing / agim-apps)
+
+   STATUS: ⚠️  PROVISIONAL — ALL VALUES BELOW ARE PLACEHOLDERS
+   ─────────────────────────────────────────────────────────────────────────────
+   These tokens have NOT been confirmed from the official AGI&M brand source.
+
+   BEFORE ANY PUBLIC LAUNCH:
+   1. Inspect the live stylesheet at https://agim.ca
+   2. Extract all confirmed --color-*, --font-*, --space-* custom properties
+   3. Replace provisional values below with confirmed values
+   4. Remove all "PROVISIONAL" comments where values are confirmed
+   5. Open a PR titled: chore: confirm AGI&M brand tokens from agim.ca
+   6. Merge to main — all platform applications inherit confirmed values instantly
+
+   See docs/BRANDING_GOVERNANCE.md for the full token confirmation process.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* --------------------------------------------------------------------------
+     COLOR — Brand Primary
+     PROVISIONAL: extract from agim.ca before use in production
+  -------------------------------------------------------------------------- */
+  --color-primary:           #0B2545; /* PROVISIONAL */
+  --color-primary-hover:     #0e2e54; /* PROVISIONAL */
+  --color-secondary:         #1B4F8A; /* PROVISIONAL */
+  --color-accent:            #4A7FB5; /* PROVISIONAL */
+
+  /* --------------------------------------------------------------------------
+     COLOR — Backgrounds
+     PROVISIONAL: extract from agim.ca before use in production
+  -------------------------------------------------------------------------- */
+  --color-bg-page:           #F0F4F8; /* PROVISIONAL */
+  --color-bg-surface:        #FFFFFF; /* Standard white — likely safe */
+  --color-bg-subtle:         #E8EDF3; /* PROVISIONAL */
+
+  /* --------------------------------------------------------------------------
+     COLOR — Text
+     PROVISIONAL: confirm dark text against agim.ca body styles
+  -------------------------------------------------------------------------- */
+  --color-text-primary:      #0D1B2A; /* PROVISIONAL */
+  --color-text-secondary:    #4A5568; /* Standard gray — likely safe */
+  --color-text-muted:        #718096; /* Standard gray — likely safe */
+  --color-text-inverse:      #FFFFFF; /* Standard white */
+
+  /* --------------------------------------------------------------------------
+     COLOR — Borders
+  -------------------------------------------------------------------------- */
+  --color-border:            #CBD5E0; /* Standard gray */
+  --color-border-strong:     #A0AEC0; /* Standard gray */
+  --color-border-focus:      #4A7FB5; /* PROVISIONAL — matches --color-accent */
+
+  /* --------------------------------------------------------------------------
+     COLOR — Semantic States
+     These are intentionally standard and unlikely to need brand confirmation.
+  -------------------------------------------------------------------------- */
+  --color-success:           #276749;
+  --color-success-bg:        #F0FFF4;
+  --color-error:             #C53030;
+  --color-error-bg:          #FFF5F5;
+  --color-warning:           #C05621;
+  --color-warning-bg:        #FFFAF0;
+  --color-info:              #2B6CB0;
+  --color-info-bg:           #EBF8FF;
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY — Font Families
+     PROVISIONAL: confirm heading font from agim.ca (may use a web font)
+     Body and mono are safe system defaults until confirmed.
+  -------------------------------------------------------------------------- */
+  --font-family-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                          'Helvetica Neue', Arial, sans-serif; /* PROVISIONAL */
+  --font-family-body:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                          'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono:    'JetBrains Mono', 'Fira Code', 'Cascadia Code',
+                          'Courier New', monospace;
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY — Font Sizes (rem scale, base = 16px)
+  -------------------------------------------------------------------------- */
+  --font-size-xs:    0.75rem;    /*  12px */
+  --font-size-sm:    0.875rem;   /*  14px */
+  --font-size-base:  1rem;       /*  16px */
+  --font-size-lg:    1.125rem;   /*  18px */
+  --font-size-xl:    1.25rem;    /*  20px */
+  --font-size-2xl:   1.5rem;     /*  24px */
+  --font-size-3xl:   1.875rem;   /*  30px */
+  --font-size-4xl:   2.25rem;    /*  36px */
+  --font-size-5xl:   3rem;       /*  48px */
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY — Font Weights
+  -------------------------------------------------------------------------- */
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-black:     900;
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY — Line Heights
+  -------------------------------------------------------------------------- */
+  --line-height-tight:    1.25;
+  --line-height-snug:     1.375;
+  --line-height-normal:   1.5;
+  --line-height-relaxed:  1.625;
+
+  /* --------------------------------------------------------------------------
+     SPACING — 4px base unit scale
+  -------------------------------------------------------------------------- */
+  --space-1:    0.25rem;   /*   4px */
+  --space-2:    0.5rem;    /*   8px */
+  --space-3:    0.75rem;   /*  12px */
+  --space-4:    1rem;      /*  16px */
+  --space-5:    1.25rem;   /*  20px */
+  --space-6:    1.5rem;    /*  24px */
+  --space-8:    2rem;      /*  32px */
+  --space-10:   2.5rem;    /*  40px */
+  --space-12:   3rem;      /*  48px */
+  --space-16:   4rem;      /*  64px */
+  --space-20:   5rem;      /*  80px */
+  --space-24:   6rem;      /*  96px */
+
+  /* --------------------------------------------------------------------------
+     LAYOUT
+  -------------------------------------------------------------------------- */
+  --max-width-content:  720px;
+  --max-width-wide:     1024px;
+  --max-width-full:     1280px;
+
+  /* --------------------------------------------------------------------------
+     BORDERS
+     AGI&M industrial aesthetic: keep border-radius minimal (≤6px)
+  -------------------------------------------------------------------------- */
+  --radius-sm:  2px;
+  --radius-md:  4px;
+  --radius-lg:  6px;
+
+  /* --------------------------------------------------------------------------
+     SHADOWS
+     Use sparingly — AGI&M aesthetic is flat/minimal
+  -------------------------------------------------------------------------- */
+  --shadow-sm:  0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:  0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+  /* --------------------------------------------------------------------------
+     TRANSITIONS
+     All durations ≤200ms per HTML_ENGINEERING_STANDARDS.md Standard 8
+  -------------------------------------------------------------------------- */
+  --transition-fast:    150ms ease;
+  --transition-normal:  200ms ease;
+
+  /* --------------------------------------------------------------------------
+     FORM ELEMENTS
+     Minimum 48px height ensures touch target compliance (WCAG 2.5.5)
+  -------------------------------------------------------------------------- */
+  --input-height:       48px;
+  --input-padding-x:    var(--space-4);
+  --input-padding-y:    var(--space-3);
+  --input-border:       1px solid var(--color-border);
+  --input-border-focus: 2px solid var(--color-border-focus);
+  --input-bg:           var(--color-bg-surface);
+  --input-radius:       var(--radius-md);
+
+  /* --------------------------------------------------------------------------
+     Z-INDEX SCALE
+  -------------------------------------------------------------------------- */
+  --z-base:     0;
+  --z-raised:   10;
+  --z-overlay:  100;
+  --z-modal:    200;
+  --z-toast:    300;
+  --z-tooltip:  400;
+
+}
