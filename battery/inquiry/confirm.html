@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inquiry Received — AGI&amp;M Battery Sourcing</title>
+  <meta name="description" content="Your battery cell sourcing inquiry has been received by AGI&amp;M. A confirmation and your inquiry reference number are shown below.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Inquiry Received — AGI&amp;M">
+  <meta property="og:description" content="Your battery cell sourcing inquiry has been submitted to AGI&amp;M.">
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="AGI&amp;M">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/shared/assets/favicon.ico">
+  <link rel="apple-touch-icon"         href="/shared/assets/apple-touch-icon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../shared/css/tokens.css">
+  <link rel="stylesheet" href="../../shared/css/base.css">
+  <link rel="stylesheet" href="css/form.css">
+
+  <style>
+    /* Confirmation-specific styles */
+    .confirm-shell {
+      max-width: var(--max-w-form);
+      margin: 0 auto;
+    }
+
+    .confirm-status {
+      display: flex;
+      align-items: center;
+      gap: var(--sp2);
+      margin-bottom: var(--sp5);
+      padding: var(--sp3) var(--sp3);
+      background: var(--color-success-bg);
+      border-left: 3px solid var(--color-success);
+    }
+    .confirm-status-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--color-success);
+    }
+    .confirm-status-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-success);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .inquiry-id-block {
+      background: #fff;
+      border: 1px solid var(--rule);
+      padding: var(--sp3) var(--sp3);
+      margin-bottom: var(--sp5);
+    }
+    .inquiry-id-label {
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--sp1);
+      display: block;
+    }
+    .inquiry-id-value {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: .04em;
+      display: block;
+      margin-bottom: var(--sp2);
+      word-break: break-all;
+    }
+    .inquiry-id-ts {
+      font-size: 11px;
+      color: var(--muted);
+      display: block;
+    }
+
+    .btn-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: var(--sp2);
+      padding: 8px 18px;
+      border: 1px solid rgba(11,37,69,.22);
+      background: none;
+      color: var(--navy);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background var(--t-fast), border-color var(--t-fast);
+    }
+    .btn-copy:hover {
+      background: rgba(11,37,69,.04);
+      border-color: var(--navy);
+    }
+    .btn-copy:focus-visible {
+      outline: 2px solid var(--mid);
+      outline-offset: 2px;
+    }
+
+    .immutability-notice {
+      background: var(--tint);
+      border-left: 2px solid var(--light);
+      padding: var(--sp2) var(--sp3);
+      margin-bottom: var(--sp5);
+    }
+    .immutability-notice p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .immutability-notice strong {
+      color: var(--navy);
+    }
+
+    .summary-title {
+      font-size: 10px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: var(--sp3);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .summary-title::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--light);
+      flex-shrink: 0;
+    }
+
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: var(--sp5);
+    }
+    .summary-table tr {
+      border-bottom: 1px solid var(--rule);
+    }
+    .summary-table td {
+      padding: 10px 0;
+      vertical-align: top;
+      font-size: 13.5px;
+    }
+    .summary-table td:first-child {
+      width: 42%;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .06em;
+      padding-right: var(--sp2);
+      padding-top: 12px;
+    }
+    .summary-table td:last-child {
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .summary-table .section-row td {
+      padding-top: var(--sp3);
+      padding-bottom: 4px;
+      border-bottom: none;
+    }
+    .summary-table .section-row td:first-child {
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(11,37,69,.35);
+      font-weight: 600;
+      padding-top: var(--sp4);
+    }
+    .summary-table .section-row td:last-child {
+      color: transparent;
+    }
+
+    .confirm-actions {
+      display: flex;
+      gap: var(--sp2);
+      flex-wrap: wrap;
+      margin-top: var(--sp4);
+    }
+    .btn-new-inquiry {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      padding: 14px 32px;
+      font-size: 11px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity var(--t-fast);
+    }
+    .btn-new-inquiry:hover { opacity: .87; color: #fff; }
+    .btn-new-inquiry:focus-visible { outline: 2px solid var(--mid); outline-offset: 3px; }
+
+    .btn-home {
+      display: inline-block;
+      border: 1px solid rgba(11,37,69,.22);
+      color: var(--navy);
+      padding: 14px 32px;
+      font-size: 11px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      transition: border-color var(--t-fast);
+    }
+    .btn-home:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-home:focus-visible { outline: 2px solid var(--mid); outline-offset: 3px; }
+
+    .what-next {
+      margin-top: var(--sp5);
+      padding-top: var(--sp4);
+      border-top: 1px solid var(--rule);
+    }
+    .what-next h2 {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin-bottom: var(--sp3);
+      color: var(--navy);
+    }
+    .next-steps {
+      counter-reset: steps;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp2);
+    }
+    .next-step {
+      display: flex;
+      gap: var(--sp2);
+      align-items: flex-start;
+    }
+    .next-step-n {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: .04em;
+    }
+    .next-step-text {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+      padding-top: 3px;
+    }
+
+    /* No data state */
+    .no-data {
+      padding: var(--sp5) 0;
+      text-align: center;
+      color: var(--muted);
+    }
+    .no-data p { font-size: 14px; margin-bottom: var(--sp3); }
+  </style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="https://agim.ca">AGI&amp;M</a>
+      <a class="nav-back" href="index.html">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M7.5 2L3.5 6L7.5 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+        </svg>
+        New Inquiry
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" role="banner">
+    <div class="hero-inner">
+      <div class="kicker">Battery Procurement</div>
+      <h1>Inquiry<br><strong>Received</strong></h1>
+      <p class="hero-sub">
+        Your sourcing requirements have been submitted to AGI&amp;M.
+        A member of our procurement team will review your inquiry
+        and respond within 3&ndash;5 business days.
+      </p>
+    </div>
+  </header>
+
+  <!-- Confirmation -->
+  <main class="form-area" role="main" aria-label="Submission confirmation">
+    <div class="confirm-shell" id="confirm-content">
+
+      <!-- Loading / no-data fallback: rendered by JS below -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-foot" role="contentinfo">
+    <div class="page-foot-inner">
+      <a class="foot-brand" href="https://agim.ca">AGI&amp;M</a>
+      <span class="foot-copy">&copy; 2024&ndash;2026 AGI&amp;M ASSETS INC. All rights reserved.</span>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  function escapeHtml(s) {
+    return String(s || '')
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
+  function label(key) {
+    var map = {
+      company_name:    'Company',
+      contact_name:    'Contact',
+      business_email:  'Email',
+      country:         'Country',
+      cell_reference:  'Cell Reference',
+      chemistry:       'Chemistry',
+      nominal_voltage: 'Nominal Voltage',
+      capacity_ah:     'Capacity (Ah)',
+      dim_length_mm:   'Length (mm)',
+      dim_width_mm:    'Width (mm)',
+      dim_thickness_mm:'Thickness (mm)',
+      dimension_flex:  'Dimension Flexibility',
+      discharge_rate:  'Discharge Rate',
+      certifications:  'Certifications',
+      annual_volume:   'Annual Volume',
+      target_price:    'Target Price',
+      lead_time:       'Lead Time',
+      additional_notes:'Additional Notes',
+    };
+    return map[key] || key.replace(/_/g,' ');
+  }
+
+  function sectionOf(key) {
+    var s1 = ['company_name','contact_name','business_email','country'];
+    var s2 = ['cell_reference','chemistry','nominal_voltage','capacity_ah',
+              'dim_length_mm','dim_width_mm','dim_thickness_mm',
+              'dimension_flex','discharge_rate','certifications'];
+    if (s1.indexOf(key) > -1) return '01';
+    if (s2.indexOf(key) > -1) return '02';
+    return '03';
+  }
+
+  function renderConfirm(data) {
+    var shell = document.getElementById('confirm-content');
+    if (!shell) return;
+
+    /* Build summary rows */
+    var sectionTitles = { '01':'Company Information', '02':'Battery Requirements', '03':'Commercial Requirements' };
+    var lastSection = null;
+    var fieldOrder = [
+      'company_name','contact_name','business_email','country',
+      'cell_reference','chemistry','nominal_voltage','capacity_ah',
+      'dim_length_mm','dim_width_mm','dim_thickness_mm',
+      'dimension_flex','discharge_rate','certifications',
+      'annual_volume','target_price','lead_time','additional_notes'
+    ];
+    var rows = '';
+    fieldOrder.forEach(function(key) {
+      var val = data[key];
+      if (!val || val === '' || val === '0') return;
+      var sec = sectionOf(key);
+      if (sec !== lastSection) {
+        rows += '<tr class="section-row"><td>' + escapeHtml(sectionTitles[sec]) + '</td><td></td></tr>';
+        lastSection = sec;
+      }
+      rows += '<tr><td>' + escapeHtml(label(key)) + '</td><td>' + escapeHtml(val) + '</td></tr>';
+    });
+
+    shell.innerHTML =
+      '<div class="confirm-status" role="status">' +
+        '<svg class="confirm-status-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">' +
+          '<circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>' +
+          '<path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>' +
+        '</svg>' +
+        '<span class="confirm-status-text">Inquiry Submitted Successfully</span>' +
+      '</div>' +
+
+      '<div class="inquiry-id-block">' +
+        '<span class="inquiry-id-label">Inquiry Reference Number</span>' +
+        '<span class="inquiry-id-value" id="inquiry-id-display">' + escapeHtml(data.inquiry_id) + '</span>' +
+        '<span class="inquiry-id-ts">Submitted: ' + escapeHtml(data.submitted_at) + '</span>' +
+        '<button class="btn-copy" id="copy-btn" aria-label="Copy inquiry ID to clipboard">' +
+          '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">' +
+            '<rect x="4" y="4" width="7" height="7" rx="0" stroke="currentColor" stroke-width="1.2"/>' +
+            '<path d="M1 8V1h7" stroke="currentColor" stroke-width="1.2"/>' +
+          '</svg>' +
+          'Copy ID' +
+        '</button>' +
+      '</div>' +
+
+      '<div class="immutability-notice" role="note">' +
+        '<p>' +
+          '<strong>Submitted records cannot be edited.</strong> ' +
+          'This inquiry is a permanent commercial record. If your requirements change, ' +
+          'please submit a new inquiry and reference this Inquiry ID in the Additional Notes field. ' +
+          '<em>Note: Phase&nbsp;1 submissions are stored via the form submission service. ' +
+          'True database-level immutability will be enforced in Phase&nbsp;2.</em>' +
+        '</p>' +
+      '</div>' +
+
+      '<p class="summary-title">Submission Summary</p>' +
+      '<table class="summary-table" aria-label="Submitted inquiry details">' +
+        '<tbody>' + rows + '</tbody>' +
+      '</table>' +
+
+      '<div class="confirm-actions">' +
+        '<a class="btn-new-inquiry" href="index.html">Submit Another Inquiry</a>' +
+        '<a class="btn-home" href="https://agim.ca">Return to AGI&amp;M</a>' +
+      '</div>' +
+
+      '<div class="what-next">' +
+        '<h2>What happens next</h2>' +
+        '<div class="next-steps">' +
+          '<div class="next-step"><span class="next-step-n">1</span><p class="next-step-text">AGI&amp;M reviews your requirements and verifies completeness, typically within 1 business day.</p></div>' +
+          '<div class="next-step"><span class="next-step-n">2</span><p class="next-step-text">An RFQ is issued to qualified battery cell manufacturers on your behalf. Your identity is not disclosed to suppliers.</p></div>' +
+          '<div class="next-step"><span class="next-step-n">3</span><p class="next-step-text">AGI&amp;M collects supplier responses, compares pricing and certification compliance, and prepares a professional quotation.</p></div>' +
+          '<div class="next-step"><span class="next-step-n">4</span><p class="next-step-text">You receive an AGI&amp;M quotation within 3&ndash;5 business days, referencing your Inquiry ID: <strong>' + escapeHtml(data.inquiry_id) + '</strong>.</p></div>' +
+        '</div>' +
+      '</div>';
+
+    /* Copy button */
+    var copyBtn = document.getElementById('copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        var id = data.inquiry_id;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(id).then(function () {
+            copyBtn.textContent = 'Copied';
+            setTimeout(function () {
+              copyBtn.innerHTML =
+                '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">' +
+                  '<rect x="4" y="4" width="7" height="7" stroke="currentColor" stroke-width="1.2"/>' +
+                  '<path d="M1 8V1h7" stroke="currentColor" stroke-width="1.2"/>' +
+                '</svg> Copy ID';
+            }, 2500);
+          });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = id; ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+          document.body.removeChild(ta);
+          copyBtn.textContent = 'Copied';
+          setTimeout(function () { copyBtn.textContent = 'Copy ID'; }, 2500);
+        }
+      });
+    }
+  }
+
+  function renderNoData() {
+    var shell = document.getElementById('confirm-content');
+    if (!shell) return;
+    shell.innerHTML =
+      '<div class="no-data">' +
+        '<p>No submission data found. You may have refreshed this page after submission.</p>' +
+        '<a class="btn-new-inquiry" href="index.html">Return to Inquiry Form</a>' +
+      '</div>';
+  }
+
+  /* Load data from sessionStorage */
+  document.addEventListener('DOMContentLoaded', function () {
+    var raw = null;
+    try { raw = sessionStorage.getItem('agim_inquiry_result'); } catch(e) {}
+
+    if (raw) {
+      try {
+        var data = JSON.parse(raw);
+        renderConfirm(data);
+        /* Clear sessionStorage after rendering to prevent stale state on refresh */
+        try { sessionStorage.removeItem('agim_inquiry_result'); } catch(e) {}
+      } catch(e) {
+        renderNoData();
+      }
+    } else {
+      /* Check URL param for ID (Formspree _next redirect carries it) */
+      var urlId = new URLSearchParams(window.location.search).get('id');
+      if (urlId) {
+        renderConfirm({
+          inquiry_id:   urlId,
+          submitted_at: new Date().toUTCString(),
+          _note:        'Detail data not available (page reload or direct link). Your inquiry was submitted successfully.',
+        });
+      } else {
+        renderNoData();
+      }
+    }
+  });
+
+}());
+</script>
+
+</body>
+</html>
