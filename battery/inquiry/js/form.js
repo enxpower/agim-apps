@@ -10,13 +10,22 @@
   'use strict';
 
   /* -------------------------------------------------------------------------
-     CONFIGURATION
-     Set FORMSPREE_ENDPOINT to your Formspree form endpoint.
-     Format: https://formspree.io/f/XXXXXXXX
-     Obtain from https://formspree.io after creating a form.
-     Until configured, form data is logged to console only (dev mode).
+     CONFIGURATION — REQUIRED BEFORE LAUNCH
+     ─────────────────────────────────────────────────────────────────────────
+     FORMSPREE_ENDPOINT must be set before this application goes live.
+     Without it, form submissions are NOT delivered to AGI&M.
+     The application will run in development mode (console-only) until set.
+
+     HOW TO CONFIGURE:
+     1. Go to https://formspree.io and create a free account
+     2. Create a new form — set the notification email to andy.gong@agim.ca
+     3. Copy the endpoint URL (format: https://formspree.io/f/XXXXXXXX)
+     4. Replace the empty string below with that URL
+     5. Commit and push — no other changes required
+
+     CURRENT STATUS: EMPTY — submissions will not be delivered until set.
   -------------------------------------------------------------------------- */
-  var FORMSPREE_ENDPOINT = ''; // TODO: set before production launch
+  var FORMSPREE_ENDPOINT = ''; /* CONFIGURE: paste Formspree endpoint here */
   var FORM_ID = 'battery-inquiry-form';
   var STORAGE_KEY = 'agim_battery_inquiry';
 
@@ -75,7 +84,6 @@
           else el.value = value;
         });
       });
-      // Sync visual selection state
       syncRadioStyles();
     } catch (e) {}
   }
@@ -241,7 +249,6 @@
     e.preventDefault();
 
     if (!validate()) {
-      // Scroll to first error
       var firstError = document.querySelector('.field-error.is-visible');
       if (firstError) {
         firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -250,16 +257,19 @@
     }
 
     var btn = document.querySelector('.btn-submit');
-    if (btn) { btn.disabled = true; btn.textContent = 'Submitting…'; }
+    if (btn) { btn.disabled = true; btn.textContent = 'Submitting\u2026'; }
 
     var inquiryId = generateInquiryId();
     var timestamp = new Date().toUTCString();
     var payload   = buildPayload(inquiryId, timestamp);
 
     if (!FORMSPREE_ENDPOINT) {
-      // Dev mode: no endpoint configured — go directly to confirm
-      console.warn('[AGI&M] Formspree endpoint not configured. Bypassing submission for development.');
-      console.log('[AGI&M] Payload:', payload);
+      /*
+       * Formspree endpoint not configured.
+       * The form will complete the user-facing flow (confirmation page)
+       * but submission data will NOT be sent to AGI&M.
+       * Configure FORMSPREE_ENDPOINT above before publishing to production.
+       */
       clearState();
       redirectToConfirm(payload);
       return;
@@ -267,7 +277,7 @@
 
     var body = new FormData();
     Object.keys(payload).forEach(function (k) { body.append(k, payload[k]); });
-    body.append('_subject', 'Battery Sourcing Inquiry — ' + inquiryId);
+    body.append('_subject', 'Battery Sourcing Inquiry \u2014 ' + inquiryId);
     body.append('_next',    window.location.origin + '/battery/inquiry/confirm.html?id=' + encodeURIComponent(inquiryId));
     body.append('_format',  'plain');
 
@@ -299,20 +309,15 @@
     var form = document.getElementById(FORM_ID);
     if (!form) return;
 
-    // Restore saved state
     restoreState();
 
-    // Auto-save on change
     form.addEventListener('change', function () {
       saveState();
       syncRadioStyles();
     });
     form.addEventListener('input', saveState);
-
-    // Submit
     form.addEventListener('submit', handleSubmit);
 
-    // Sync visual states on load
     syncRadioStyles();
   });
 
