@@ -117,8 +117,8 @@
 
 /* Dark footer — matches agim.ca style */
 .page-foot--dark {
-  background: var(--navy);
+  background: #162A45;
   border-top: none;
 }
-.page-foot--dark .foot-logo { filter: brightness(0) invert(1); opacity: 0.9; }
+.page-foot--dark .foot-logo { }  /* reversed SVG used directly */
 .page-foot--dark .foot-copy { color: rgba(255,255,255,0.45); }
