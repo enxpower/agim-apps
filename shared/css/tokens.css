@@ -1,0 +1,75 @@
+/* =============================================================================
+   AGI&M Design Tokens
+   Source: agim.ca (extracted 2026-06-16 — confirmed values)
+   Status: CONFIRMED — safe for production use
+   ============================================================================= */
+
+:root {
+
+  /* --- Color: Brand (confirmed from agim.ca) --- */
+  --navy:    #0B2545;
+  --mid:     #1B4F8A;
+  --light:   #4A7FB5;
+  --muted:   #5E7A99;
+  --tint:    #F0F4F8;
+  --rule:    rgba(11,37,69,.09);
+  --bg:      #FAFBFC;
+
+  /* --- Aliases for platform use --- */
+  --color-primary:        var(--navy);
+  --color-secondary:      var(--mid);
+  --color-accent:         var(--light);
+  --color-text-primary:   var(--navy);
+  --color-text-secondary: var(--muted);
+  --color-text-muted:     var(--muted);
+  --color-bg-page:        var(--bg);
+  --color-bg-surface:     #FFFFFF;
+  --color-bg-tint:        var(--tint);
+  --color-border:         var(--rule);
+  --color-border-solid:   rgba(11,37,69,.18);
+  --color-border-focus:   var(--mid);
+
+  /* --- Semantic --- */
+  --color-success:        #1a6640;
+  --color-success-bg:     #f0faf4;
+  --color-error:          #b91c1c;
+  --color-error-bg:       #fef2f2;
+
+  /* --- Typography (confirmed from agim.ca) --- */
+  --font-body:    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono:    "JetBrains Mono", "Fira Code", "Courier New", monospace;
+
+  /* --- Spacing (confirmed from agim.ca: sp1=8px scale) --- */
+  --sp1:  8px;
+  --sp2: 16px;
+  --sp3: 24px;
+  --sp4: 32px;
+  --sp5: 48px;
+  --sp6: 64px;
+  --sp7: 88px;
+  --sp8: 112px;
+
+  /* --- Layout --- */
+  --gutter:          48px;
+  --max-w-content:   760px;
+  --max-w-form:      680px;
+  --max-w-platform:  1160px;
+
+  /* --- Borders --- */
+  --radius:    0px;   /* AGI&M: sharp corners — industrial aesthetic */
+  --radius-sm: 2px;   /* minimal only where needed for usability */
+
+  /* --- Transitions --- */
+  --t-fast:   .15s ease;
+  --t-normal: .2s ease;
+
+  /* --- Form --- */
+  --input-height:  48px;
+  --input-border:  1px solid rgba(11,37,69,.22);
+  --input-focus:   2px solid var(--mid);
+
+}
+
+@media (max-width: 900px) { :root { --gutter: 24px; } }
+@media (max-width: 480px) { :root { --gutter: 20px; } }
