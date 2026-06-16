@@ -120,7 +120,5 @@
   background: var(--navy);
   border-top: none;
 }
-.page-foot--dark .foot-logo svg text { fill: var(--white); }
-.page-foot--dark .foot-logo svg rect[fill="#0B2545"] { fill: var(--white); }
-.page-foot--dark .foot-logo svg rect[fill="#4A7FB5"] { fill: rgba(255,255,255,0.5); }
+.page-foot--dark .foot-logo { filter: brightness(0) invert(1); opacity: 0.9; }
 .page-foot--dark .foot-copy { color: rgba(255,255,255,0.45); }
