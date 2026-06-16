@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGI&M Apps Platform</title>
+  <meta name="description" content="AGI&M ASSETS INC. — professional web applications for battery sourcing, RFQ systems, and engineering tools.">
+  <link rel="canonical" href="https://apps.agim.ca/">
+  <meta property="og:title"       content="AGI&M Apps Platform">
+  <meta property="og:description" content="Professional web applications by AGI&M ASSETS INC. — battery sourcing, RFQ systems, and engineering tools.">
+  <meta property="og:image"       content="https://apps.agim.ca/battery/inquiry/assets/og-image.png">
+  <meta property="og:url"         content="https://apps.agim.ca/">
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="AGI&M">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:title"      content="AGI&M Apps Platform">
+  <meta name="twitter:description" content="Professional web applications by AGI&M ASSETS INC.">
+  <meta name="twitter:image"      content="https://apps.agim.ca/battery/inquiry/assets/og-image.png">
+  <link rel="icon" type="image/x-icon"  href="/shared/assets/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/shared/assets/favicon.svg">
+  <link rel="apple-touch-icon"          href="/shared/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="shared/css/tokens.css">
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0;overflow-x:hidden;background:var(--tint);color:var(--body);font-family:var(--font);-webkit-font-smoothing:antialiased}
+    .nav{background:var(--white);border-bottom:1px solid var(--color-border);padding:0 var(--gutter)}
+    .nav-inner{max-width:var(--max-w);margin:0 auto;height:64px;display:flex;align-items:center}
+    .nav-logo{display:flex;align-items:center;text-decoration:none}
+    .nav-logo svg{height:36px;width:auto}
+    .hero{background:var(--navy);padding:var(--sp-3xl) var(--gutter) var(--sp-2xl)}
+    .hero-inner{max-width:var(--max-w);margin:0 auto}
+    .kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-bottom:var(--sp-l);display:flex;align-items:center;gap:16px}
+    .kicker::before{content:"";width:32px;height:1px;background:var(--steel);flex-shrink:0}
+    h1{font-size:clamp(28px,4vw,48px);font-weight:300;letter-spacing:-.025em;color:var(--white);margin:0 0 var(--sp-l);line-height:1.1}
+    h1 strong{font-weight:600}
+    .hero p{font-size:15px;color:rgba(255,255,255,.62);line-height:1.75;max-width:480px;margin:0}
+    .apps{max-width:var(--max-w);margin:0 auto;padding:var(--sp-2xl) var(--gutter)}
+    .apps-label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);margin-bottom:var(--sp-xl);padding-bottom:var(--sp-m);border-bottom:1px solid var(--color-border)}
+    .app-card{display:block;background:var(--white);border:1px solid var(--color-border);padding:var(--sp-xl);text-decoration:none;transition:border-color .15s;margin-bottom:var(--sp-m)}
+    .app-card:hover{border-color:var(--color-border-strong)}
+    .app-tag{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-bottom:var(--sp-m)}
+    .app-title{font-size:20px;font-weight:300;letter-spacing:-.015em;color:var(--navy);margin:0 0 var(--sp-s)}
+    .app-desc{font-size:13px;color:var(--body);line-height:1.65;margin:0}
+    .app-link{display:inline-block;margin-top:var(--sp-m);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean);font-weight:600}
+    .foot{border-top:1px solid var(--color-border);padding:var(--sp-l) var(--gutter);background:var(--white)}
+    .foot-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .foot-logo svg{height:28px;width:auto}
+    .foot-copy{font-size:11px;color:var(--steel);letter-spacing:.04em}
+  </style>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://agim.ca" aria-label="AGI&amp;M home">
+      <svg width="160" height="45" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0"  y="4"  width="22" height="22" fill="#0B2545"/>
+        <rect x="26" y="4"  width="22" height="22" fill="#4A7FB5"/>
+        <rect x="0"  y="30" width="22" height="22" fill="#4A7FB5"/>
+        <rect x="26" y="30" width="22" height="22" fill="#0B2545"/>
+        <text x="60" y="22" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#0B2545" letter-spacing="2.5">AGI&amp;M</text>
+        <text x="60" y="42" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#4A7FB5" letter-spacing="2">ASSETS INC.</text>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Apps Platform</div>
+    <h1>AGI&amp;M<br><strong>Applications</strong></h1>
+    <p>Professional tools for battery sourcing, RFQ generation, and engineering procurement.</p>
+  </div>
+</header>
+
+<main class="apps">
+  <div class="apps-label">Available Applications</div>
+
+  <a class="app-card" href="/battery/inquiry/">
+    <div class="app-tag">Battery Procurement</div>
+    <h2 class="app-title">Battery Cell Sourcing Inquiry</h2>
+    <p class="app-desc">Submit lithium battery cell sourcing requirements. AGI&amp;M will collect competitive quotations from qualified Chinese manufacturers and respond with a professional RFQ analysis.</p>
+    <span class="app-link">Open Inquiry Form &rarr;</span>
+  </a>
+
+</main>
+
+<footer class="foot" role="contentinfo">
+  <div class="foot-inner">
+    <a href="https://agim.ca" aria-label="AGI&amp;M home">
+      <svg class="foot-logo" width="120" height="34" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0"  y="4"  width="22" height="22" fill="#0B2545"/>
+        <rect x="26" y="4"  width="22" height="22" fill="#4A7FB5"/>
+        <rect x="0"  y="30" width="22" height="22" fill="#4A7FB5"/>
+        <rect x="26" y="30" width="22" height="22" fill="#0B2545"/>
+        <text x="60" y="22" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#0B2545" letter-spacing="2.5">AGI&amp;M</text>
+        <text x="60" y="42" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#4A7FB5" letter-spacing="2">ASSETS INC.</text>
+      </svg>
+    </a>
+    <span class="foot-copy">&copy; 2024&ndash;2026 AGI&amp;M ASSETS INC. All rights reserved.</span>
+  </div>
+</footer>
+</body>
+</html>
