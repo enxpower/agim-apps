@@ -3,31 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Battery Cell Sourcing Inquiry — AGI&amp;M</title>
-  <meta name="description" content="Submit a battery cell sourcing inquiry to AGI&amp;M. We source lithium battery cells from qualified Chinese manufacturers for international OEM customers.">
+  <meta name="description" content="Submit a battery cell sourcing inquiry to AGI&amp;M. We source lithium battery cells from qualified manufacturers for international OEM customers.">
   <link rel="canonical" href="https://apps.agim.ca/battery/inquiry/">
-
   <!-- Open Graph -->
-  <meta property="og:title"       content="Battery Cell Sourcing Inquiry — AGI&amp;M">
-  <meta property="og:description" content="International B2B procurement portal. Submit your lithium battery cell requirements and receive a professional quotation from AGI&amp;M.">
-  <meta property="og:image"       content="https://apps.agim.ca/battery/inquiry/assets/og-image.png">
+  <meta property="og:title"        content="Battery Cell Sourcing Inquiry — AGI&amp;M">
+  <meta property="og:description"  content="International B2B procurement portal. Submit your lithium battery cell requirements and receive a professional quotation from AGI&amp;M.">
+  <meta property="og:image"        content="https://apps.agim.ca/battery/inquiry/assets/og-image.png">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:url"         content="https://apps.agim.ca/battery/inquiry/">
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="AGI&amp;M">
-
+  <meta property="og:url"          content="https://apps.agim.ca/battery/inquiry/">
+  <meta property="og:type"         content="website">
+  <meta property="og:site_name"    content="AGI&amp;M">
   <!-- Twitter / X -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Battery Cell Sourcing Inquiry — AGI&amp;M">
   <meta name="twitter:description" content="International B2B procurement portal. Submit your lithium battery cell requirements to AGI&amp;M.">
   <meta name="twitter:image"       content="https://apps.agim.ca/battery/inquiry/assets/og-image.png">
-
-  <!-- Favicon (uses shared asset) -->
+  <!-- Favicon — official AGI&M VI mark -->
   <link rel="icon" type="image/x-icon" href="/shared/assets/favicon.ico">
-  <link rel="apple-touch-icon"         href="/shared/assets/apple-touch-icon.png">
-
+  <link rel="icon" type="image/svg+xml" href="/shared/assets/favicon.svg">
+  <link rel="apple-touch-icon"          href="/shared/assets/apple-touch-icon.png">
   <!-- Styles -->
   <link rel="stylesheet" href="../../shared/css/tokens.css">
   <link rel="stylesheet" href="../../shared/css/base.css">
@@ -42,7 +38,16 @@
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Site navigation">
     <div class="nav-inner">
-      <a class="nav-brand" href="https://agim.ca">AGI&amp;M</a>
+      <a class="nav-logo" href="https://agim.ca" aria-label="AGI&amp;M home">
+        <svg width="160" height="45" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0"  y="4"  width="22" height="22" fill="#0B2545"/>
+          <rect x="26" y="4"  width="22" height="22" fill="#4A7FB5"/>
+          <rect x="0"  y="30" width="22" height="22" fill="#4A7FB5"/>
+          <rect x="26" y="30" width="22" height="22" fill="#0B2545"/>
+          <text x="60" y="22" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#0B2545" letter-spacing="2.5">AGI&amp;M</text>
+          <text x="60" y="42" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#4A7FB5" letter-spacing="2">ASSETS INC.</text>
+        </svg>
+      </a>
       <a class="nav-back" href="https://agim.ca">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
           <path d="M7.5 2L3.5 6L7.5 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
@@ -58,9 +63,9 @@
       <div class="kicker">Battery Procurement</div>
       <h1>Battery Cell<br><strong>Sourcing Inquiry</strong></h1>
       <p class="hero-sub">
-        Complete this form to submit a battery cell sourcing request.
-        AGI&amp;M will review your requirements and respond with a
-        professional quotation within 3&ndash;5 business days.
+        Submit your requirements below. AGI&amp;M will source and compare qualified
+        battery cell manufacturers and respond with a professional quotation
+        within 3&ndash;5 business days.
       </p>
     </div>
   </header>
@@ -69,116 +74,53 @@
   <main class="form-area" id="main-form">
     <div class="form-shell">
 
-      <!-- Progress -->
       <div class="progress-bar" aria-label="Form sections">
-        <span class="progress-step active">01&nbsp;&nbsp;Company</span>
+        <span class="progress-step active">01&nbsp; Company</span>
         <span class="progress-sep" aria-hidden="true"></span>
-        <span class="progress-step">02&nbsp;&nbsp;Battery</span>
+        <span class="progress-step">02&nbsp; Battery</span>
         <span class="progress-sep" aria-hidden="true"></span>
-        <span class="progress-step">03&nbsp;&nbsp;Commercial</span>
+        <span class="progress-step">03&nbsp; Commercial</span>
       </div>
 
       <form id="battery-inquiry-form" novalidate autocomplete="on">
 
-        <!-- ================================================================
-             SECTION 1: Company Information
-        ================================================================= -->
-        <fieldset class="form-section" aria-labelledby="sec1-label">
-          <legend id="sec1-label" class="section-label" data-n="01">Company Information</legend>
+        <!-- ── SECTION 1: Company ─────────────────────────────────────────── -->
+        <fieldset class="form-section" aria-labelledby="s1">
+          <legend id="s1" class="section-label" data-n="01">Company Information</legend>
 
           <div class="field--half">
             <div class="field">
-              <label class="field-label" for="company-name">
-                Company Name <span class="req" aria-label="required">*</span>
-              </label>
-              <input
-                class="input"
-                type="text"
-                id="company-name"
-                name="company_name"
-                autocomplete="organization"
-                placeholder="Your organization name"
-                aria-required="true"
-                aria-describedby="company-name-error"
-              >
+              <label class="field-label" for="company-name">Company Name <span class="req" aria-label="required">*</span></label>
+              <input class="input" type="text" id="company-name" name="company_name" autocomplete="organization" placeholder="Your organization" aria-required="true" aria-describedby="company-name-error">
               <span class="field-error" id="company-name-error" role="alert" aria-live="polite"></span>
             </div>
-
             <div class="field">
-              <label class="field-label" for="contact-name">
-                Contact Name <span class="req" aria-label="required">*</span>
-              </label>
-              <input
-                class="input"
-                type="text"
-                id="contact-name"
-                name="contact_name"
-                autocomplete="name"
-                placeholder="First and last name"
-                aria-required="true"
-                aria-describedby="contact-name-error"
-              >
+              <label class="field-label" for="contact-name">Contact Name <span class="req" aria-label="required">*</span></label>
+              <input class="input" type="text" id="contact-name" name="contact_name" autocomplete="name" placeholder="First and last name" aria-required="true" aria-describedby="contact-name-error">
               <span class="field-error" id="contact-name-error" role="alert" aria-live="polite"></span>
             </div>
           </div>
 
           <div class="field--half">
             <div class="field">
-              <label class="field-label" for="business-email">
-                Business Email <span class="req" aria-label="required">*</span>
-              </label>
-              <input
-                class="input"
-                type="email"
-                id="business-email"
-                name="business_email"
-                autocomplete="email"
-                placeholder="you@company.com"
-                aria-required="true"
-                aria-describedby="business-email-error"
-              >
+              <label class="field-label" for="business-email">Business Email <span class="req" aria-label="required">*</span></label>
+              <input class="input" type="email" id="business-email" name="business_email" autocomplete="email" placeholder="you@company.com" aria-required="true" aria-describedby="business-email-error">
               <span class="field-error" id="business-email-error" role="alert" aria-live="polite"></span>
             </div>
-
             <div class="field">
-              <label class="field-label" for="country">
-                Country <span class="req" aria-label="required">*</span>
-              </label>
+              <label class="field-label" for="country">Country <span class="req" aria-label="required">*</span></label>
               <div class="select-wrap">
-                <select
-                  class="select"
-                  id="country"
-                  name="country"
-                  autocomplete="country-name"
-                  aria-required="true"
-                  aria-describedby="country-error"
-                >
+                <select class="select" id="country" name="country" autocomplete="country-name" aria-required="true" aria-describedby="country-error">
                   <option value="">Select country</option>
-                  <option>Australia</option>
-                  <option>Austria</option>
-                  <option>Belgium</option>
-                  <option>Brazil</option>
-                  <option>Canada</option>
-                  <option>Denmark</option>
-                  <option>Finland</option>
-                  <option>France</option>
-                  <option>Germany</option>
-                  <option>India</option>
-                  <option>Italy</option>
-                  <option>Japan</option>
-                  <option>Mexico</option>
-                  <option>Netherlands</option>
-                  <option>New Zealand</option>
-                  <option>Norway</option>
-                  <option>Poland</option>
-                  <option>Portugal</option>
-                  <option>South Korea</option>
-                  <option>Spain</option>
-                  <option>Sweden</option>
-                  <option>Switzerland</option>
-                  <option>United Kingdom</option>
-                  <option>United States</option>
-                  <option>Other</option>
+                  <option>Australia</option><option>Austria</option><option>Belgium</option>
+                  <option>Brazil</option><option>Canada</option><option>Denmark</option>
+                  <option>Finland</option><option>France</option><option>Germany</option>
+                  <option>India</option><option>Italy</option><option>Japan</option>
+                  <option>Mexico</option><option>Netherlands</option><option>New Zealand</option>
+                  <option>Norway</option><option>Poland</option><option>Portugal</option>
+                  <option>South Korea</option><option>Spain</option><option>Sweden</option>
+                  <option>Switzerland</option><option>United Kingdom</option>
+                  <option>United States</option><option>Other</option>
                 </select>
               </div>
               <span class="field-error" id="country-error" role="alert" aria-live="polite"></span>
@@ -187,55 +129,60 @@
 
         </fieldset>
 
-        <!-- ================================================================
-             SECTION 2: Battery Requirements
-        ================================================================= -->
-        <fieldset class="form-section" aria-labelledby="sec2-label">
-          <legend id="sec2-label" class="section-label" data-n="02">Battery Cell Requirements</legend>
+        <!-- ── SECTION 2: Battery Requirements ───────────────────────────── -->
+        <fieldset class="form-section" aria-labelledby="s2">
+          <legend id="s2" class="section-label" data-n="02">Battery Cell Requirements</legend>
 
-          <!-- Cell Reference -->
+          <!-- Drone Application — NEW, required -->
           <div class="field">
-            <label class="field-label" for="cell-reference">Existing Cell Reference</label>
-            <input
-              class="input"
-              type="text"
-              id="cell-reference"
-              name="cell_reference"
-              placeholder="e.g. 45300103-173Ah or manufacturer part number"
-            >
-            <span class="field-hint">
-              Enter the part number or model of your current cell, if known.
-              This is not required but helps identify equivalents more precisely.
-            </span>
+            <fieldset>
+              <legend class="field-label" id="drone-app-label">Drone Application <span class="req" aria-label="required">*</span></legend>
+              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="drone-app-label">
+                <label class="radio-opt"><input type="radio" name="drone_application" value="Agricultural Drone" aria-describedby="drone-application-error"><span class="radio-text">Agricultural</span></label>
+                <label class="radio-opt"><input type="radio" name="drone_application" value="Delivery Drone" aria-describedby="drone-application-error"><span class="radio-text">Delivery</span></label>
+                <label class="radio-opt"><input type="radio" name="drone_application" value="Survey / Mapping" aria-describedby="drone-application-error"><span class="radio-text">Survey / Mapping</span></label>
+                <label class="radio-opt"><input type="radio" name="drone_application" value="Industrial Inspection" aria-describedby="drone-application-error"><span class="radio-text">Inspection</span></label>
+                <label class="radio-opt"><input type="radio" name="drone_application" value="Defense" aria-describedby="drone-application-error"><span class="radio-text">Defense</span></label>
+                <label class="radio-opt"><input type="radio" name="drone_application" value="Other" aria-describedby="drone-application-error"><span class="radio-text">Other</span></label>
+              </div>
+              <span class="field-error" id="drone-application-error" role="alert" aria-live="polite"></span>
+            </fieldset>
+          </div>
+
+          <!-- Cell Reference + Current Manufacturer -->
+          <div class="field--half">
+            <div class="field">
+              <label class="field-label" for="cell-reference">Existing Cell Reference</label>
+              <input class="input" type="text" id="cell-reference" name="cell_reference" placeholder="e.g. 45300103-173Ah">
+              <span class="field-hint">Part number or model of your current cell, if known.</span>
+            </div>
+            <div class="field">
+              <label class="field-label" id="mfr-label">Current Cell Manufacturer</label>
+              <fieldset>
+                <legend class="sr-only">Current Cell Manufacturer</legend>
+                <div class="select-wrap">
+                  <select class="select" id="current-manufacturer-select" name="current_manufacturer" aria-labelledby="mfr-label">
+                    <option value="">Select or leave blank</option>
+                    <option>EVE</option><option>CATL</option><option>Gotion</option>
+                    <option>Sunwoda</option><option>Farasis</option><option>REPT</option>
+                    <option>Great Power</option><option>Unknown</option><option>Other</option>
+                  </select>
+                </div>
+              </fieldset>
+              <span class="field-hint">Chinese manufacturers routinely ask who your current supplier is.</span>
+            </div>
           </div>
 
           <!-- Chemistry -->
           <div class="field">
             <fieldset>
-              <legend class="field-label" id="chemistry-label">
-                Cell Chemistry <span class="req" aria-label="required">*</span>
-              </legend>
-              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="chemistry-label">
-                <label class="radio-opt">
-                  <input type="radio" name="chemistry" value="NMC" aria-describedby="chemistry-error">
-                  <span class="radio-text">NMC<span class="radio-sub">High energy density</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="chemistry" value="NCA" aria-describedby="chemistry-error">
-                  <span class="radio-text">NCA<span class="radio-sub">High energy / power</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="chemistry" value="LFP" aria-describedby="chemistry-error">
-                  <span class="radio-text">LFP<span class="radio-sub">Long cycle life</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="chemistry" value="LTO" aria-describedby="chemistry-error">
-                  <span class="radio-text">LTO<span class="radio-sub">Extreme fast charge</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="chemistry" value="Not sure" aria-describedby="chemistry-error">
-                  <span class="radio-text">Not sure<span class="radio-sub">AGI&amp;M will advise</span></span>
-                </label>
+              <legend class="field-label" id="chem-label">Cell Chemistry <span class="req" aria-label="required">*</span></legend>
+              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="chem-label">
+                <label class="radio-opt"><input type="radio" name="chemistry" value="NMC" aria-describedby="chemistry-error"><span class="radio-text">NMC<span class="radio-sub">High energy</span></span></label>
+                <label class="radio-opt"><input type="radio" name="chemistry" value="NCA" aria-describedby="chemistry-error"><span class="radio-text">NCA<span class="radio-sub">High power</span></span></label>
+                <label class="radio-opt"><input type="radio" name="chemistry" value="LFP" aria-describedby="chemistry-error"><span class="radio-text">LFP<span class="radio-sub">Long cycle</span></span></label>
+                <label class="radio-opt"><input type="radio" name="chemistry" value="LTO" aria-describedby="chemistry-error"><span class="radio-text">LTO<span class="radio-sub">Fast charge</span></span></label>
+                <label class="radio-opt"><input type="radio" name="chemistry" value="Not sure" aria-describedby="chemistry-error"><span class="radio-text">Not sure</span></label>
               </div>
               <span class="field-error" id="chemistry-error" role="alert" aria-live="polite"></span>
             </fieldset>
@@ -244,44 +191,15 @@
           <!-- Voltage + Capacity -->
           <div class="field--half">
             <div class="field">
-              <label class="field-label" for="nominal-voltage">
-                Nominal Voltage (V) <span class="req" aria-label="required">*</span>
-              </label>
-              <input
-                class="input"
-                type="number"
-                id="nominal-voltage"
-                name="nominal_voltage"
-                placeholder="e.g. 3.7"
-                min="0.1"
-                max="100"
-                step="0.01"
-                aria-required="true"
-                aria-describedby="nominal-voltage-hint nominal-voltage-error"
-              >
-              <span class="field-hint" id="nominal-voltage-hint">3.2&thinsp;V = LFP &nbsp;|&nbsp; 3.6&ndash;3.7&thinsp;V = NMC / NCA &nbsp;|&nbsp; 2.3&thinsp;V = LTO</span>
+              <label class="field-label" for="nominal-voltage">Nominal Voltage (V) <span class="req" aria-label="required">*</span></label>
+              <input class="input" type="number" id="nominal-voltage" name="nominal_voltage" placeholder="e.g. 3.7" min="0.1" max="100" step="0.01" aria-required="true" aria-describedby="voltage-hint nominal-voltage-error">
+              <span class="field-hint" id="voltage-hint">3.2&thinsp;V = LFP &nbsp;|&nbsp; 3.6&ndash;3.7&thinsp;V = NMC/NCA &nbsp;|&nbsp; 2.3&thinsp;V = LTO</span>
               <span class="field-error" id="nominal-voltage-error" role="alert" aria-live="polite"></span>
             </div>
-
             <div class="field">
-              <label class="field-label" for="capacity">
-                Required Capacity (Ah) <span class="req" aria-label="required">*</span>
-              </label>
-              <input
-                class="input"
-                type="number"
-                id="capacity"
-                name="capacity_ah"
-                placeholder="e.g. 152"
-                min="0.1"
-                step="0.1"
-                aria-required="true"
-                aria-describedby="capacity-hint capacity-error"
-              >
-              <span class="field-hint" id="capacity-hint">
-                If your reference shows two values (e.g. 152&thinsp;Ah and 173&thinsp;Ah),
-                enter your actual target capacity here.
-              </span>
+              <label class="field-label" for="capacity">Required Capacity (Ah) <span class="req" aria-label="required">*</span></label>
+              <input class="input" type="number" id="capacity" name="capacity_ah" placeholder="e.g. 152" min="0.1" step="0.1" aria-required="true" aria-describedby="cap-hint capacity-error">
+              <span class="field-hint" id="cap-hint">If two values shown (e.g. 152 Ah / 173 Ah), enter your target capacity.</span>
               <span class="field-error" id="capacity-error" role="alert" aria-live="polite"></span>
             </div>
           </div>
@@ -291,93 +209,72 @@
             <label class="field-label">Cell Dimensions</label>
             <div class="dim-row">
               <div class="dim-unit">
-                <label class="sr-only" for="dim-length">Length</label>
-                <input class="input" type="number" id="dim-length" name="dim_length_mm"
-                  placeholder="Length" min="0" step="0.1"
-                  aria-label="Length in millimetres">
+                <label class="sr-only" for="dim-length">Length mm</label>
+                <input class="input" type="number" id="dim-length" name="dim_length_mm" placeholder="Length" min="0" step="0.1" aria-label="Length in mm">
                 <span class="dim-suffix" aria-hidden="true">mm L</span>
               </div>
               <div class="dim-unit">
-                <label class="sr-only" for="dim-width">Width</label>
-                <input class="input" type="number" id="dim-width" name="dim_width_mm"
-                  placeholder="Width" min="0" step="0.1"
-                  aria-label="Width in millimetres">
+                <label class="sr-only" for="dim-width">Width mm</label>
+                <input class="input" type="number" id="dim-width" name="dim_width_mm" placeholder="Width" min="0" step="0.1" aria-label="Width in mm">
                 <span class="dim-suffix" aria-hidden="true">mm W</span>
               </div>
               <div class="dim-unit">
-                <label class="sr-only" for="dim-thickness">Thickness</label>
-                <input class="input" type="number" id="dim-thickness" name="dim_thickness_mm"
-                  placeholder="Thickness" min="0" step="0.1"
-                  aria-label="Thickness in millimetres">
+                <label class="sr-only" for="dim-thickness">Thickness mm</label>
+                <input class="input" type="number" id="dim-thickness" name="dim_thickness_mm" placeholder="Thickness" min="0" step="0.1" aria-label="Thickness in mm">
                 <span class="dim-suffix" aria-hidden="true">mm T</span>
               </div>
             </div>
-            <span class="field-hint">Leave blank if dimensions are unknown or flexible.</span>
+            <span class="field-hint">Leave blank if unknown or flexible.</span>
           </div>
 
-          <!-- Dimension Flexibility -->
-          <div class="field">
-            <fieldset>
-              <legend class="field-label" id="dim-flex-label">
-                Dimension Flexibility <span class="req" aria-label="required">*</span>
-              </legend>
-              <div class="radio-group" role="radiogroup" aria-labelledby="dim-flex-label">
-                <label class="radio-opt">
-                  <input type="radio" name="dimension-flex" value="Exact match required" aria-describedby="dimension-flex-error">
-                  <span class="radio-text">
-                    Exact match required
-                    <span class="radio-sub">Cell must fit existing mechanical enclosure precisely</span>
-                  </span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="dimension-flex" value="Small variation acceptable (±2mm)" aria-describedby="dimension-flex-error">
-                  <span class="radio-text">
-                    Small variation acceptable (&plusmn;2&thinsp;mm)
-                    <span class="radio-sub">Minor dimensional differences can be accommodated</span>
-                  </span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="dimension-flex" value="Flexible — equivalent spec acceptable" aria-describedby="dimension-flex-error">
-                  <span class="radio-text">
-                    Flexible &mdash; equivalent specification acceptable
-                    <span class="radio-sub">Open to any format that meets electrical requirements</span>
-                  </span>
-                </label>
-              </div>
-              <span class="field-error" id="dimension-flex-error" role="alert" aria-live="polite"></span>
-            </fieldset>
+          <!-- Battery Pack + Dimension Flexibility -->
+          <div class="field--half">
+            <div class="field">
+              <label class="field-label" for="battery-pack">Current Battery Pack</label>
+              <input class="input" type="text" id="battery-pack" name="current_battery_pack" placeholder="e.g. 12S1P, 22.2V 20Ah">
+              <span class="field-hint">Pack configuration if known. Helps suppliers propose compatible replacements.</span>
+            </div>
+            <div class="field">
+              <fieldset>
+                <legend class="field-label" id="dim-flex-label">Dimension Flexibility <span class="req" aria-label="required">*</span></legend>
+                <div class="radio-group" role="radiogroup" aria-labelledby="dim-flex-label">
+                  <label class="radio-opt"><input type="radio" name="dimension_flex" value="Exact match required" aria-describedby="dimension-flex-error"><span class="radio-text">Exact match<span class="radio-sub">Must fit existing enclosure</span></span></label>
+                  <label class="radio-opt"><input type="radio" name="dimension_flex" value="Small variation acceptable (±2mm)" aria-describedby="dimension-flex-error"><span class="radio-text">&plusmn;2&thinsp;mm flex<span class="radio-sub">Minor variation acceptable</span></span></label>
+                  <label class="radio-opt"><input type="radio" name="dimension_flex" value="Flexible — equivalent spec acceptable" aria-describedby="dimension-flex-error"><span class="radio-text">Flexible<span class="radio-sub">Any format meeting spec</span></span></label>
+                </div>
+                <span class="field-error" id="dimension-flex-error" role="alert" aria-live="polite"></span>
+              </fieldset>
+            </div>
           </div>
 
           <!-- Discharge Rate -->
           <div class="field">
             <fieldset>
-              <legend class="field-label" id="discharge-label">
-                Continuous Discharge Requirement <span class="req" aria-label="required">*</span>
-              </legend>
+              <legend class="field-label" id="discharge-label">Continuous Discharge Rate <span class="req" aria-label="required">*</span></legend>
               <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="discharge-label">
-                <label class="radio-opt">
-                  <input type="radio" name="discharge-rate" value="Standard (≤1C)" aria-describedby="discharge-rate-error">
-                  <span class="radio-text">Standard<span class="radio-sub">&le;1C</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="discharge-rate" value="Medium (1–3C)" aria-describedby="discharge-rate-error">
-                  <span class="radio-text">Medium<span class="radio-sub">1&ndash;3C</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="discharge-rate" value="High (3–10C)" aria-describedby="discharge-rate-error">
-                  <span class="radio-text">High<span class="radio-sub">3&ndash;10C</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="discharge-rate" value="Extreme (>10C)" aria-describedby="discharge-rate-error">
-                  <span class="radio-text">Extreme<span class="radio-sub">&gt;10C</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="discharge-rate" value="Not sure" aria-describedby="discharge-rate-error">
-                  <span class="radio-text">Not sure</span>
-                </label>
+                <label class="radio-opt"><input type="radio" name="discharge_rate" value="Standard (≤1C)" aria-describedby="discharge-rate-error"><span class="radio-text">Standard<span class="radio-sub">&le;1C</span></span></label>
+                <label class="radio-opt"><input type="radio" name="discharge_rate" value="Medium (1–3C)" aria-describedby="discharge-rate-error"><span class="radio-text">Medium<span class="radio-sub">1&ndash;3C</span></span></label>
+                <label class="radio-opt"><input type="radio" name="discharge_rate" value="High (3–10C)" aria-describedby="discharge-rate-error"><span class="radio-text">High<span class="radio-sub">3&ndash;10C</span></span></label>
+                <label class="radio-opt"><input type="radio" name="discharge_rate" value="Extreme (>10C)" aria-describedby="discharge-rate-error"><span class="radio-text">Extreme<span class="radio-sub">&gt;10C</span></span></label>
+                <label class="radio-opt"><input type="radio" name="discharge_rate" value="Not sure" aria-describedby="discharge-rate-error"><span class="radio-text">Not sure</span></label>
               </div>
-              <span class="field-hint">Drone applications typically require 3&ndash;10C continuous. Storage applications are typically &le;1C.</span>
+              <span class="field-hint">Drone applications typically require 3&ndash;10C continuous.</span>
               <span class="field-error" id="discharge-rate-error" role="alert" aria-live="polite"></span>
+            </fieldset>
+          </div>
+
+          <!-- Weight Sensitivity — NEW, required (Not Sure available) -->
+          <div class="field">
+            <fieldset>
+              <legend class="field-label" id="weight-label">Weight Sensitivity <span class="req" aria-label="required">*</span></legend>
+              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="weight-label">
+                <label class="radio-opt"><input type="radio" name="weight_sensitivity" value="Must match existing weight" aria-describedby="weight-sensitivity-error"><span class="radio-text">Must match<span class="radio-sub">Weight critical</span></span></label>
+                <label class="radio-opt"><input type="radio" name="weight_sensitivity" value="Lower weight preferred" aria-describedby="weight-sensitivity-error"><span class="radio-text">Lighter preferred<span class="radio-sub">Reduce if possible</span></span></label>
+                <label class="radio-opt"><input type="radio" name="weight_sensitivity" value="No weight constraint" aria-describedby="weight-sensitivity-error"><span class="radio-text">No constraint</span></label>
+                <label class="radio-opt"><input type="radio" name="weight_sensitivity" value="Not sure" aria-describedby="weight-sensitivity-error"><span class="radio-text">Not sure</span></label>
+              </div>
+              <span class="field-hint">For drone applications, cell weight directly impacts flight performance.</span>
+              <span class="field-error" id="weight-sensitivity-error" role="alert" aria-live="polite"></span>
             </fieldset>
           </div>
 
@@ -386,174 +283,142 @@
             <fieldset>
               <legend class="field-label">Certification Requirements</legend>
               <div class="check-group" role="group" aria-label="Required certifications">
-                <label class="check-opt">
-                  <input type="checkbox" name="certifications" value="UN38.3">
-                  <span class="check-text">UN38.3 &mdash; Required for international transport</span>
-                </label>
-                <label class="check-opt">
-                  <input type="checkbox" name="certifications" value="CE">
-                  <span class="check-text">CE &mdash; Required for European market</span>
-                </label>
-                <label class="check-opt">
-                  <input type="checkbox" name="certifications" value="IEC 62368-1">
-                  <span class="check-text">IEC&nbsp;62368-1 &mdash; Audio/video and IT equipment</span>
-                </label>
-                <label class="check-opt">
-                  <input type="checkbox" name="certifications" value="UL">
-                  <span class="check-text">UL &mdash; North American safety standard</span>
-                </label>
-                <label class="check-opt">
-                  <input type="checkbox" name="certifications" value="Not sure">
-                  <span class="check-text">Not sure &mdash; AGI&amp;M will advise based on application</span>
-                </label>
+                <label class="check-opt"><input type="checkbox" name="certifications" value="UN38.3"><span class="check-text">UN38.3 &mdash; Transport safety (required for international shipment)</span></label>
+                <label class="check-opt"><input type="checkbox" name="certifications" value="MSDS"><span class="check-text">MSDS &mdash; Material Safety Data Sheet</span></label>
+                <label class="check-opt"><input type="checkbox" name="certifications" value="IEC62133"><span class="check-text">IEC 62133 &mdash; Safety for portable battery packs</span></label>
+                <label class="check-opt"><input type="checkbox" name="certifications" value="CE"><span class="check-text">CE &mdash; Required for European market</span></label>
+                <label class="check-opt"><input type="checkbox" name="certifications" value="Other"><span class="check-text">Other &mdash; Specify in Additional Notes</span></label>
+                <label class="check-opt"><input type="checkbox" name="certifications" value="Not sure"><span class="check-text">Not sure &mdash; AGI&amp;M will advise</span></label>
               </div>
-              <span class="field-hint">Select all that apply. If none are selected, AGI&amp;M will confirm requirements before issuing the RFQ.</span>
+              <span class="field-hint">Select all that apply. If unsure, AGI&amp;M will confirm before issuing the RFQ.</span>
             </fieldset>
           </div>
 
         </fieldset>
 
-        <!-- ================================================================
-             SECTION 3: Commercial Requirements
-        ================================================================= -->
-        <fieldset class="form-section" aria-labelledby="sec3-label">
-          <legend id="sec3-label" class="section-label" data-n="03">Commercial Requirements</legend>
+        <!-- ── SECTION 3: Commercial Requirements ────────────────────────── -->
+        <fieldset class="form-section" aria-labelledby="s3">
+          <legend id="s3" class="section-label" data-n="03">Commercial Requirements</legend>
 
           <!-- Volume -->
           <div class="field">
             <fieldset>
-              <legend class="field-label" id="volume-label">
-                Estimated Annual Volume <span class="req" aria-label="required">*</span>
-              </legend>
-              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="volume-label">
-                <label class="radio-opt">
-                  <input type="radio" name="annual-volume" value="Below 500 units/year" aria-describedby="annual-volume-error">
-                  <span class="radio-text">Below 500<span class="radio-sub">units / year</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="annual-volume" value="500–2,000 units/year" aria-describedby="annual-volume-error">
-                  <span class="radio-text">500&ndash;2,000<span class="radio-sub">units / year</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="annual-volume" value="2,000–10,000 units/year" aria-describedby="annual-volume-error">
-                  <span class="radio-text">2,000&ndash;10,000<span class="radio-sub">units / year</span></span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="annual-volume" value="Above 10,000 units/year" aria-describedby="annual-volume-error">
-                  <span class="radio-text">Above 10,000<span class="radio-sub">units / year</span></span>
-                </label>
+              <legend class="field-label" id="vol-label">Estimated Annual Volume <span class="req" aria-label="required">*</span></legend>
+              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="vol-label">
+                <label class="radio-opt"><input type="radio" name="annual_volume" value="Below 500 units/year" aria-describedby="annual-volume-error"><span class="radio-text">Below 500<span class="radio-sub">units / year</span></span></label>
+                <label class="radio-opt"><input type="radio" name="annual_volume" value="500–2,000 units/year" aria-describedby="annual-volume-error"><span class="radio-text">500&ndash;2,000<span class="radio-sub">units / year</span></span></label>
+                <label class="radio-opt"><input type="radio" name="annual_volume" value="2,000–10,000 units/year" aria-describedby="annual-volume-error"><span class="radio-text">2,000&ndash;10,000<span class="radio-sub">units / year</span></span></label>
+                <label class="radio-opt"><input type="radio" name="annual_volume" value="Above 10,000 units/year" aria-describedby="annual-volume-error"><span class="radio-text">Above 10,000<span class="radio-sub">units / year</span></span></label>
               </div>
               <span class="field-error" id="annual-volume-error" role="alert" aria-live="polite"></span>
             </fieldset>
           </div>
 
-          <!-- Target Price -->
+          <!-- Procurement Priority — replaces Target Price Range -->
           <div class="field">
             <fieldset>
-              <legend class="field-label" id="price-label">Target Price Range (USD per cell)</legend>
-              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="price-label">
-                <label class="radio-opt">
-                  <input type="radio" name="target-price" value="Below $40 / cell">
-                  <span class="radio-text">Below $40</span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="target-price" value="$40–$70 / cell">
-                  <span class="radio-text">$40 &ndash; $70</span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="target-price" value="$70–$120 / cell">
-                  <span class="radio-text">$70 &ndash; $120</span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="target-price" value="Above $120 / cell">
-                  <span class="radio-text">Above $120</span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="target-price" value="No target — please advise">
-                  <span class="radio-text">No target &mdash; please advise</span>
-                </label>
+              <legend class="field-label" id="priority-label">Procurement Priority <span class="req" aria-label="required">*</span></legend>
+              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="priority-label">
+                <label class="radio-opt"><input type="radio" name="procurement_priority" value="Lowest Cost" aria-describedby="procurement-priority-error"><span class="radio-text">Lowest Cost<span class="radio-sub">Price above all</span></span></label>
+                <label class="radio-opt"><input type="radio" name="procurement_priority" value="Balanced Cost &amp; Performance" aria-describedby="procurement-priority-error"><span class="radio-text">Balanced<span class="radio-sub">Cost &amp; performance</span></span></label>
+                <label class="radio-opt"><input type="radio" name="procurement_priority" value="Highest Performance" aria-describedby="procurement-priority-error"><span class="radio-text">Highest Performance<span class="radio-sub">Cost secondary</span></span></label>
+                <label class="radio-opt"><input type="radio" name="procurement_priority" value="Not sure" aria-describedby="procurement-priority-error"><span class="radio-text">Not sure</span></label>
               </div>
+              <span class="field-error" id="procurement-priority-error" role="alert" aria-live="polite"></span>
             </fieldset>
           </div>
 
-          <!-- Lead Time -->
-          <div class="field">
-            <fieldset>
-              <legend class="field-label" id="leadtime-label">
-                Required Lead Time <span class="req" aria-label="required">*</span>
-              </legend>
-              <div class="radio-group radio-group--inline" role="radiogroup" aria-labelledby="leadtime-label">
-                <label class="radio-opt">
-                  <input type="radio" name="lead-time" value="Under 4 weeks" aria-describedby="lead-time-error">
-                  <span class="radio-text">Under 4 weeks</span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="lead-time" value="4–8 weeks" aria-describedby="lead-time-error">
-                  <span class="radio-text">4&ndash;8 weeks</span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="lead-time" value="8–16 weeks" aria-describedby="lead-time-error">
-                  <span class="radio-text">8&ndash;16 weeks</span>
-                </label>
-                <label class="radio-opt">
-                  <input type="radio" name="lead-time" value="Flexible" aria-describedby="lead-time-error">
-                  <span class="radio-text">Flexible</span>
-                </label>
-              </div>
-              <span class="field-error" id="lead-time-error" role="alert" aria-live="polite"></span>
-            </fieldset>
+          <!-- Lead Time + Sample -->
+          <div class="field--half">
+            <div class="field">
+              <fieldset>
+                <legend class="field-label" id="lead-label">Required Lead Time <span class="req" aria-label="required">*</span></legend>
+                <div class="radio-group" role="radiogroup" aria-labelledby="lead-label">
+                  <label class="radio-opt"><input type="radio" name="lead_time" value="Under 4 weeks" aria-describedby="lead-time-error"><span class="radio-text">Under 4 weeks</span></label>
+                  <label class="radio-opt"><input type="radio" name="lead_time" value="4–8 weeks" aria-describedby="lead-time-error"><span class="radio-text">4&ndash;8 weeks</span></label>
+                  <label class="radio-opt"><input type="radio" name="lead_time" value="8–16 weeks" aria-describedby="lead-time-error"><span class="radio-text">8&ndash;16 weeks</span></label>
+                  <label class="radio-opt"><input type="radio" name="lead_time" value="Flexible" aria-describedby="lead-time-error"><span class="radio-text">Flexible</span></label>
+                </div>
+                <span class="field-error" id="lead-time-error" role="alert" aria-live="polite"></span>
+              </fieldset>
+            </div>
+
+            <div class="field">
+              <fieldset>
+                <legend class="field-label" id="sample-label">Evaluation Samples Needed?</legend>
+                <div class="radio-group" role="radiogroup" aria-labelledby="sample-label">
+                  <label class="radio-opt"><input type="radio" name="sample_required" value="No"><span class="radio-text">No</span></label>
+                  <label class="radio-opt"><input type="radio" name="sample_required" value="Yes"><span class="radio-text">Yes</span></label>
+                </div>
+                <div id="sample-qty-wrap">
+                  <label class="field-label" for="sample-quantity" style="margin-top:12px;">Sample Quantity</label>
+                  <input class="input" type="number" id="sample-quantity" name="sample_quantity" min="1" step="1" placeholder="e.g. 5" aria-describedby="sample-quantity-error">
+                  <span class="field-error" id="sample-quantity-error" role="alert" aria-live="polite"></span>
+                </div>
+              </fieldset>
+            </div>
           </div>
 
           <!-- Additional Notes -->
           <div class="field">
             <label class="field-label" for="additional-notes">Additional Notes</label>
-            <textarea
-              class="textarea"
-              id="additional-notes"
-              name="additional_notes"
-              maxlength="500"
-              placeholder="Any additional requirements, constraints, or context not covered above (max 500 characters)."
-              aria-describedby="notes-hint"
-            ></textarea>
-            <span class="field-hint" id="notes-hint">Optional. Tab configuration, existing supplier exclusions, operating temperature range, etc.</span>
+            <textarea class="textarea" id="additional-notes" name="additional_notes" maxlength="600" placeholder="Operating temperature range, tab configuration, supplier exclusions, or any other relevant requirements (max 600 characters)." aria-describedby="notes-hint"></textarea>
+            <span class="field-hint" id="notes-hint">Optional. Any context that will help AGI&amp;M generate a more accurate RFQ.</span>
           </div>
 
         </fieldset>
 
-        <!-- ================================================================
-             SUBMIT
-        ================================================================= -->
+        <!-- ── SUBMIT ─────────────────────────────────────────────────────── -->
         <div class="form-footer">
           <p class="submit-note">
-            By submitting this form, you consent to AGI&amp;M using your contact
-            information to respond to this sourcing inquiry.
-            Your details will not be shared with suppliers without your authorization.<br>
+            By submitting this form, you consent to AGI&amp;M using your contact information
+            to respond to this sourcing inquiry. Your details will not be shared with
+            suppliers without your authorization.<br>
             <strong>Submitted records cannot be edited.</strong>
-            To change your requirements, please submit a new inquiry.
+            To revise requirements, submit a new inquiry referencing your Inquiry ID.
           </p>
+
           <button type="submit" class="btn-submit">Submit Inquiry</button>
-          <p class="field-error" id="submit-error" style="display:none; margin-top:16px;" role="alert">
-            Submission failed. Please try again or contact
-            <a href="mailto:sourcing@agim.ca">sourcing@agim.ca</a> directly.
-          </p>
+
+          <!-- Config error: shown only if endpoint is not configured -->
+          <div class="error-banner" id="config-error" role="alert">
+            <strong>Submission service not available.</strong>
+            Please contact AGI&amp;M directly at
+            <a href="mailto:info@agim.ca">info@agim.ca</a> to submit your inquiry.
+          </div>
+
+          <!-- Network / Formspree error -->
+          <div class="error-banner" id="submit-error" role="alert">
+            <strong>Submission failed.</strong>
+            Please try again or contact
+            <a href="mailto:info@agim.ca">info@agim.ca</a> directly.
+            Your form data has been preserved.
+          </div>
         </div>
 
       </form>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="page-foot" role="contentinfo">
     <div class="page-foot-inner">
-      <a class="foot-brand" href="https://agim.ca">AGI&amp;M</a>
+      <a class="foot-logo" href="https://agim.ca" aria-label="AGI&amp;M home">
+        <svg width="120" height="34" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0"  y="4"  width="22" height="22" fill="#0B2545"/>
+          <rect x="26" y="4"  width="22" height="22" fill="#4A7FB5"/>
+          <rect x="0"  y="30" width="22" height="22" fill="#4A7FB5"/>
+          <rect x="26" y="30" width="22" height="22" fill="#0B2545"/>
+          <text x="60" y="22" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#0B2545" letter-spacing="2.5">AGI&amp;M</text>
+          <text x="60" y="42" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#4A7FB5" letter-spacing="2">ASSETS INC.</text>
+        </svg>
+      </a>
       <span class="foot-copy">&copy; 2024&ndash;2026 AGI&amp;M ASSETS INC. All rights reserved.</span>
     </div>
   </footer>
 
-</div><!-- .page-wrap -->
+</div>
 
 <script src="../../shared/js/utils.js"></script>
 <script src="js/form.js"></script>
-
 </body>
 </html>
