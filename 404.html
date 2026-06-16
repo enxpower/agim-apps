@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — AGI&amp;M</title>
+  <meta name="description" content="The page you are looking for does not exist.">
+  <meta name="robots" content="noindex">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Page Not Found — AGI&amp;M">
+  <meta property="og:description" content="The page you are looking for does not exist.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AGI&amp;M">
+
+  <!--
+    PROVISIONAL STYLES
+    Brand tokens are not yet confirmed from agim.ca.
+    All color values below are provisional placeholders.
+    Update shared/css/tokens.css once brand tokens are confirmed,
+    then replace inline styles here with:
+      <link rel="stylesheet" href="/shared/css/tokens.css">
+      <link rel="stylesheet" href="/shared/css/base.css">
+    See docs/BRANDING_GOVERNANCE.md for the token confirmation process.
+  -->
+  <style>
+    /* -----------------------------------------------------------------------
+       PROVISIONAL — colors to be replaced with CSS variables from tokens.css
+       once brand tokens are confirmed from agim.ca
+    ----------------------------------------------------------------------- */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;        /* Standard 1: no horizontal scrolling */
+      background-color: #F0F4F8; /* PROVISIONAL: --color-bg-page */
+      color: #0D1B2A;            /* PROVISIONAL: --color-text-primary */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                   'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #0B2545; /* PROVISIONAL: --color-primary */
+      margin-bottom: 64px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .code {
+      font-size: 72px;
+      font-weight: 900;
+      color: #0B2545; /* PROVISIONAL: --color-primary */
+      line-height: 1;
+      margin: 0 0 16px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: #0D1B2A; /* PROVISIONAL: --color-text-primary */
+    }
+
+    p {
+      font-size: 15px;
+      color: #4A5568; /* --color-text-secondary */
+      margin: 0 0 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background-color: #0B2545; /* PROVISIONAL: --color-primary */
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      border-radius: 4px;
+      transition: background-color 150ms ease;
+    }
+
+    .btn:hover {
+      background-color: #1B4F8A; /* PROVISIONAL: --color-secondary */
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background-color: #4A7FB5; /* PROVISIONAL: --color-accent */
+      margin: 40px auto;
+    }
+
+    .footnote {
+      font-size: 12px;
+      color: #718096; /* --color-text-muted */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <a class="logo" href="/">AGI&amp;M</a>
+
+    <div class="code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you requested does not exist or has been moved.<br>
+       Please return to the homepage or contact AGI&amp;M directly.</p>
+
+    <a class="btn" href="/">Return to Homepage</a>
+
+    <div class="divider"></div>
+
+    <p class="footnote">
+      AGI&amp;M ASSETS INC. &mdash;
+      <a href="https://agim.ca" style="color: #4A7FB5; text-decoration: none;">agim.ca</a>
+    </p>
+
+  </div>
+
+  <!--
+    TODO (implementation PR):
+    - Replace provisional inline styles with shared/css/tokens.css + shared/css/base.css
+    - Add confirmed AGI&M logo SVG
+    - Verify on Desktop Chrome, Mac Safari, iPhone Safari
+  -->
+
+</body>
+</html>
